@@ -52,8 +52,9 @@ Github 공부용
 
     ```
     $ git rm --cached [파일명]
-
-
+    ```
+    
+    
 
 - git 변경사항 확정 
 
