@@ -1,11 +1,14 @@
 # TIL
 
-Today I Learned
+Today I Learned⏰
 
 
 
 ### Categories
 
-​	- Git
-  - Git
-  - Markdown
+- Git
+    - Git
+    - Markdown
+- Python
+  - SW Expert
+
