@@ -35,6 +35,7 @@ Python 모르는 것 공부하기
 2. 변수
 
    - type(문자) : 할당된 타입
+   - id() : 변수에 할당된 값의 고유 주소, 메모리주소
 
    ```python
    name = "Hello"
@@ -91,6 +92,27 @@ Python 모르는 것 공부하기
    print(2 or 0) # -> 2
    print(0 or 2) # -> 2
    print(0 or 0) # -> 0
+   ```
+
+7. 조건표현식
+
+   ```python
+   if score >= 60:
+       result = "합격"
+   else:
+       result = "불합격"
+       
+   result = "합격" if score >= 60 else "불합격"
+   ```
+
+8.  enumerate
+
+   - index와 value를 같이 반환(알고리즘문제에서 자주 쓰임)
+
+   ```python
+   fruit = ['사과','바나나','수박']
+   for index, value in enumerate(fruit):
+   	print(index, value)
    ```
 
    

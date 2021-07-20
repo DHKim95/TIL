@@ -10,5 +10,6 @@ Today I Learned⏰
     - Git
     - Markdown
 - Python
+  - 기본 문법
   - SW Expert
 
