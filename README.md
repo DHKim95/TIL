@@ -11,5 +11,25 @@ Today I Learned⏰
     - Markdown
 - Python
   - 기본 문법
-  - SW Expert
+  - SW Expert 문제 풀기
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------
+
+문제 출처 : [SW Expert Academy](https://swexpertacademy.com/main/main.do)
 
