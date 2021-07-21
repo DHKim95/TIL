@@ -115,5 +115,34 @@ Python 모르는 것 공부하기
    	print(index, value)
    ```
 
-   
+9. 정렬
+
+   - sort와 sorted의 차이
+
+   ```python
+   lst = [5,2,3,4,1]
+   # lst의 원본이 바뀐다.
+   lst.sort()
+   # 새로운 함수를 제시해준다.
+   sort_lst = sorted(lst)
+   ```
+
+10. 문자 뒤집기
+
+    - 다양한 방법 존재
+
+    ```Python
+    string = "Hello"
+    
+    1. string[::-1]
+    
+    2. "".join(reversed(string))
+    
+    3. for문
+    reversed_string = ""
+    for i in string:
+        reverse_str = i + reversed_string
+    ```
+
+    
 
