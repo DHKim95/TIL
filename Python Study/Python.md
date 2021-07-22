@@ -42,21 +42,19 @@ Python 모르는 것 공부하기
    type(name)
    ```
 
-3.  식별자
+3. 식별자
 
    - 첫 글자에는 숫자 불가 , 대소문자 구별
-
    - 식별자 이름은 영문, 숫자, 언더바(_)로 구성
-
    - 예약어는 사용불가 (충돌이 일어남)
 
-     ```python
-     # 예약어 확인
-     import keyword
-     print(keyword.kwlist)
-     ```
+   ```python
+   # 예약어 확인
+   import keyword
+   print(keyword.kwlist)
+   ```
 
-4.  진수 표현
+4. 진수 표현
 
    ```python
    # 2진수
@@ -67,7 +65,21 @@ Python 모르는 것 공부하기
    0x64 # -> 100
    ```
 
-5. 부동소수점 연산
+5.  복소수형(Complex)
+
+   - 복소수는 j로 표현
+   - type = Complex
+
+   ```python
+   # ex) 
+   a = 4+j
+   
+   a.real # 실수 리턴
+   a.image # 허수 리턴
+   a.conjugate # 켤레복소수
+   ```
+
+6. 부동소수점 연산
 
    ```python
    # 왼쪽과 오른쪽 값이 다르다
@@ -78,7 +90,7 @@ Python 모르는 것 공부하기
    math.isclose(0.1*3, 0.3) # -> True
    ```
 
-6. 논리연산자
+7. 논리연산자
 
    ```python
    # and 연산인 경우 뒤를 확인 후 반환
@@ -94,7 +106,7 @@ Python 모르는 것 공부하기
    print(0 or 0) # -> 0
    ```
 
-7. 조건표현식
+8. 조건표현식
 
    ```python
    if score >= 60:
@@ -105,7 +117,7 @@ Python 모르는 것 공부하기
    result = "합격" if score >= 60 else "불합격"
    ```
 
-8.  enumerate
+9. enumerate
 
    - index와 value를 같이 반환(알고리즘문제에서 자주 쓰임)
 
@@ -115,7 +127,7 @@ Python 모르는 것 공부하기
    	print(index, value)
    ```
 
-9. 정렬
+10. 정렬
 
    - sort와 sorted의 차이
 
@@ -127,7 +139,7 @@ Python 모르는 것 공부하기
    sort_lst = sorted(lst)
    ```
 
-10. 문자 뒤집기
+11. 문자 뒤집기
 
     - 다양한 방법 존재
 
