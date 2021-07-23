@@ -30,7 +30,7 @@ Github 공부용
 
 - git 상태 확인
 
-  -  현재 저장소 내 파일들을 확인해 볼 수 있다.
+  -  현재 저장소 내 파일들을 확인해 볼 수 있다.(모니터링)
 
   ```
   $ git status
@@ -73,6 +73,9 @@ Github 공부용
   # git 설정 확인
   $ git config --global -l
   ```
+
+- git log
+  - 저장소 내부의 Commit을 확인하는 것
 
 
 
