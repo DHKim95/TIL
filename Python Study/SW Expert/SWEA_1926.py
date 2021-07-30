@@ -10,8 +10,7 @@ for num in arr:
     if cnt != 0: # 한개 이상 들어가면 숫자를 추가
         answer.append(cnt)
     else: # 아닐경우 원래 숫자 추가
-        answer.append(num)
-        
+        answer.append(num)   
 for i in answer:
     if type(i) == str: # 문자열인 경우 원래 숫자기 때문에 그대로 출력
         print(i, end=' ')
