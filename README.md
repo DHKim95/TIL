@@ -15,6 +15,8 @@ Today I Learned⏰
 - Web
     - HTML
     - CSS
+- Algorithm
+    - List_1
 
 
 
