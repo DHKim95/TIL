@@ -1,3 +1,6 @@
+array = [2,4,3,5,1,6]
+target = 3
+
 # 재귀
 def binary_search(array, target, left, right):
     middle = (left+right)//2

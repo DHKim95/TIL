@@ -11,7 +11,6 @@ Today I Learned⏰
     - Markdown
 - Python
   - 기본 문법
-  - SW Expert 문제 풀기
 - Web
     - HTML
     - CSS
