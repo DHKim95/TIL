@@ -1,5 +1,4 @@
 calendar = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-
 N = int(input())
 
 for i in range(N):
