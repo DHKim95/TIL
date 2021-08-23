@@ -2,6 +2,7 @@ N = int(input())
 arr = [str(i) for i in range(1,N+1)]
 lst = ["3","6","9"]
 answer = []
+
 for num in arr:
     cnt = 0 # 3, 6, 9가 몇개들어가는지 개수 세어주기
     for n in num: # 두자리수 이상일 경우 판단해주기
@@ -16,7 +17,6 @@ for i in answer:
         print(i, end=' ')
     else: # 숫자일 경우 3,6,9가 포함된 것이기 때문에 숫자만큼 -로 표현
         print("-"*i, end=' ')
-
 
 # 두번째로 푼것
 # N = int(input())
