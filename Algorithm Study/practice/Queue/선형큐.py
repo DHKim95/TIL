@@ -21,17 +21,17 @@ def dequeue():
         front += 1
         return Q[front]
 
-# enqueue(1)
-# enqueue(2)
-# enqueue(3)
+enqueue(1)
+enqueue(2)
+enqueue(3)
+
+print(dequeue())
+print(dequeue())
+print(dequeue())
+print(dequeue())
+
+# for i in range(100000):
+#     enqueue(i)
 #
-# print(dequeue())
-# print(dequeue())
-# print(dequeue())
-# print(dequeue())
-
-for i in range(100000):
-    enqueue(i)
-
-for i in range(100000):
-    print(dequeue())
+# for i in range(100000):
+#     print(dequeue())
