@@ -13,9 +13,13 @@ for tc in range(T):
         print("#{} {}".format(tc+1, "Impossible"))
     else:
         while True:
-            people = 0
+            people = N
+            # 시간이 되면 붕어빵 채우기
             if time % M == 0:
                 fish += K
 
+            # 한타임에 해당인원 넘어가면 탈출출
             if people == 0:
                 break
+
+
