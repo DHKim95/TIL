@@ -1,7 +1,9 @@
 T = int(input())
+
 for tc in range(T):
     number = int(input())
     a, b, c, d, e = 0, 0, 0, 0, 0
+
     while True:
         if number % 11 == 0:
             number //= 11
