@@ -10,34 +10,22 @@ for game in range(N):
 
     if a_lst.count(4) > b_lst.count(4):
         print("A")
-        # break
     elif b_lst.count(4) > a_lst.count(4):
         print("B")
-        # break
     else:
         if a_lst.count(3) > b_lst.count(3):
             print("A")
-            # break
         elif b_lst.count(3) > a_lst.count(3):
             print("B")
-            # break
         else:
             if a_lst.count(2) > b_lst.count(2):
                 print("A")
-                # break
             elif b_lst.count(2) > a_lst.count(2):
                 print("B")
-                # break
             else:
                 if a_lst.count(1) > b_lst.count(1):
                     print("A")
-                    # break
                 elif b_lst.count(1) > a_lst.count(1):
                     print("B")
-                    # break
                 else:
                     print("D")
-                    # break
-
-
-

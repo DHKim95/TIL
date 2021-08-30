@@ -6,7 +6,10 @@ def check(visited):
             cnt += 1
 
     for i in range(5):
-        if sum(visited[:][i]) == 5:
+        sum_check = 0
+        for j in range(5):
+            sum_check += visited[j][i]
+        if sum_check == 5:
             cnt += 1
 
     cnt_num = 0
