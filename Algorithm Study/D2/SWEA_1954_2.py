@@ -1,8 +1,10 @@
 T = int(input())
+
 for tc in range(T):
     N = int(input())
     dx = [0, 1, 0, -1]
     dy = [1, 0, -1, 0]
+
     graph = [[0] * N for _ in range(N)]  # 그래프
     idx = 0
     x, y = 0, -1 # 현재위치
