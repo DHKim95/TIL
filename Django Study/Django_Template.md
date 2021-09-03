@@ -123,6 +123,9 @@ articlass = 이름
     - 반드시 생성 후 등록
     - 등록하고 생성하면 앱이 생성되지 않는다.
     - 순서를 지키는 것을 권장한다.
+- 메인 폴더가 BASE_DIR이다.
+  - 앱 안의 파일들은 상관이 없고 앱 밖에 파일을 등록해주어야 한다.
+  - 경로를 여러개 등록이 가능하다.
 
 
 
@@ -286,7 +289,10 @@ articlass = 이름
 
   
 
+#### Naming URL patterns
 
+- URL을 직접 작성하는 것이 아니라 path() 함수의 name을 정의해서 사용한다.
+- 
 
 
 
@@ -356,10 +362,13 @@ python manage.py sqlmigrate articles 0001
 
 
 
-편리하게 보기 python manage.py shell_plus
+편리하게 보기 python manage.py shell_plus -> import  하고 시작
+
+python manage.py shell 쓰더라도 가능은한데 하나씩 import를 해야한다. 
 
 
 
 장고는 데이터베이스에서 삭제된 것을 재사용하지 않는다.
 
 1,2,3 사용인데 1번을 삭제하고 새로 생성하면 4번이 생성된다.
+

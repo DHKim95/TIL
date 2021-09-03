@@ -16,6 +16,8 @@ Today I Learned⏰
     - CSS
 - Algorithm
     - List_1
+    - Stack
+    - Queue
 
 
 
