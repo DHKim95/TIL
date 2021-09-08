@@ -13,7 +13,6 @@ dy = [0, 1, 0, -1]
 if N > row * col:
     check_num = True
 
-
 cnt = 1 # 입력할 숫자
 x, y = row -1, 0 # 시작 위치
 direction = 0 # 방향
@@ -51,3 +50,4 @@ else:
                 break
 
     print(y+1, row-x)
+

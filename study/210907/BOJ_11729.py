@@ -1,5 +1,5 @@
 def hanoi(n,a,b,c):
-    # print(n,a,b,c)
+    print(n,a,b,c)
     if n == 0:
         return
     else:
