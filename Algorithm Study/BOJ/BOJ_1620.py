@@ -1,7 +1,7 @@
 import sys
 input = sys.stdin.readline
 
-N, M = map(int, input().rstrip().split())
+N, M = map(int, input().rstrip().split()) # rstrip 필요
 
 dic = {}
 for i in range(1, N+1):
