@@ -1,3 +1,7 @@
+import sys
+sys.setrecursionlimit(10**9)
+input = sys.stdin.readline
+
 N = int(input()) # 노드 개수
 graph = [[] for _ in range(N+1)]
 for i in range(N-1):
