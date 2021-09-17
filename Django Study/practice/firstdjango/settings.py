@@ -12,7 +12,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 <<<<<<< HEAD
+<<<<<<< HEAD
 import os
+=======
+>>>>>>> e12262d5cabc8886e6f807ec02ae348f328a1750
 =======
 >>>>>>> e12262d5cabc8886e6f807ec02ae348f328a1750
 
@@ -36,8 +39,11 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
 <<<<<<< HEAD
+<<<<<<< HEAD
     'first',
     'second',
+=======
+>>>>>>> e12262d5cabc8886e6f807ec02ae348f328a1750
 =======
 >>>>>>> e12262d5cabc8886e6f807ec02ae348f328a1750
     'django.contrib.admin',
@@ -113,9 +119,15 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 LANGUAGE_CODE = 'ko-kr'
 
 TIME_ZONE = 'Asia/Seoul'
+=======
+LANGUAGE_CODE = 'en-us'
+
+TIME_ZONE = 'UTC'
+>>>>>>> e12262d5cabc8886e6f807ec02ae348f328a1750
 =======
 LANGUAGE_CODE = 'en-us'
 
@@ -135,10 +147,13 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
 
+=======
+>>>>>>> e12262d5cabc8886e6f807ec02ae348f328a1750
 =======
 >>>>>>> e12262d5cabc8886e6f807ec02ae348f328a1750
 # Default primary key field type
