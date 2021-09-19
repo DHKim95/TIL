@@ -12,6 +12,7 @@ lst = list(input())
 direction = 0
 x, y = 0, 0
 graph = [[x,y]]
+square = [[0] * 100 for _ in range(100)]
 
 for move in lst:
     if move == 'F':
@@ -30,32 +31,26 @@ for move in lst:
 row_lst = []
 col_lst = []
 for i in graph:
-    col_lst.append(i[1]) # 가로 모으기
-    row_lst.append(i[0]) # 세로 모으기
+    col_lst.append(i[1]+50) # 가로 모으기
+    row_lst.append(i[0]+50) # 세로 모으기
 
 row = len(set(row_lst))
 col = len(set(col_lst))
-row_check = False
-col_check = False
-for i in range(row):
-    if row_lst[i] < 0:
-        row_lst[i] = row_lst[i] * -1
-        row_check = True
-
-for i in range(col):
-    if col_lst[i] < 0:
-        col_lst[i] = col_lst[i] * -1
-        col_check = True
-
-graph = [['#'] * col for _ in range(row)]
 
 for i in range(len(row_lst)):
-    graph[row_lst[i]][col_lst[i]] = '.'
+    square[row_lst[i]][col_lst[i]] = 1
+
 
 answer = []
+for i in range(min(row_lst), max(row_lst)+1):
+    answer.append(square[i][min(col_lst):max(col_lst)+1])
 
-for i in range(len(graph)-1, -1, -1):
-    answer.append(graph[i])
+for i in range(len(answer)):
+    for j in range(len(answer[0])):
+        if answer[i][j] == 1:
+            answer[i][j] = '.'
+        else:
+            answer[i][j] = '#'
 
 for i in answer:
     print(''.join(i))
