@@ -11,13 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-<<<<<<< HEAD
-<<<<<<< HEAD
 import os
-=======
->>>>>>> e12262d5cabc8886e6f807ec02ae348f328a1750
-=======
->>>>>>> e12262d5cabc8886e6f807ec02ae348f328a1750
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -38,14 +32,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-<<<<<<< HEAD
-<<<<<<< HEAD
     'first',
     'second',
-=======
->>>>>>> e12262d5cabc8886e6f807ec02ae348f328a1750
-=======
->>>>>>> e12262d5cabc8886e6f807ec02ae348f328a1750
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -118,21 +106,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 LANGUAGE_CODE = 'ko-kr'
 
 TIME_ZONE = 'Asia/Seoul'
-=======
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
->>>>>>> e12262d5cabc8886e6f807ec02ae348f328a1750
-=======
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
->>>>>>> e12262d5cabc8886e6f807ec02ae348f328a1750
 
 USE_I18N = True
 
@@ -146,16 +122,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
 
-=======
->>>>>>> e12262d5cabc8886e6f807ec02ae348f328a1750
-=======
->>>>>>> e12262d5cabc8886e6f807ec02ae348f328a1750
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 

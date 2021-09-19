@@ -1,6 +1,4 @@
 from django.shortcuts import render
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 from datetime import datetime
 import random
@@ -38,24 +36,3 @@ def result(request):
         'numbers': results
     }
     return render(request, 'first/result.html', context)
-=======
-=======
->>>>>>> e12262d5cabc8886e6f807ec02ae348f328a1750
-from django.http import HttpResponse
-
-# Create your views here.
-def index(request):
-    return HttpResponse("Hello World")
-
-def select(request):
-    message = "숫자를 입력해주세요."
-    return HttpResponse(message)
-
-def result(request):
-    message = "추첨 결과입니다."
-<<<<<<< HEAD
-    return HttpResponse(message)
->>>>>>> e12262d5cabc8886e6f807ec02ae348f328a1750
-=======
-    return HttpResponse(message)
->>>>>>> e12262d5cabc8886e6f807ec02ae348f328a1750
