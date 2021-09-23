@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <h1 class="text-center">New Question</h1>
+  <form action="{% url 'board:create' %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit">
+  </form>
+  <hr>
+  <a href="{% url 'board:index' %}">[Back]</a>
+
+  {% comment %} <form action="{% url 'board:create' %}" method="POST">
+    {% csrf_token %}
+    <div>
+      <label for="title">제목:</label>
+      <input id="title" type="text" name="title">
+    </div>
+
+    <div>
+      <label for="category">카테고리:</label>
+      <input id="category" type="text" name="category">
+    </div>
+
+    <div>
+      <label for="content">내용:</label>
+      <textarea name="content" id="content" cols="30" rows="10"></textarea>
+    </div> {% endcomment %}
+
+    {% comment %} form tag안에 버튼은 input submit과 같음 {% endcomment %}
+    {% comment %} <div>
+      <button>제출</button>
+    </div>
+  </form> {% endcomment %}
+
+
+{% endblock content %}
+
+

@@ -61,8 +61,8 @@ ROOT_URLCONF = 'my_app.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [BASE_DIR / 'templates'],
+        'APP_DIRS': True, # 모든 Installed app templates를 자동으로 탐색
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
