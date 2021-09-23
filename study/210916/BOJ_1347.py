@@ -40,7 +40,6 @@ col = len(set(col_lst))
 for i in range(len(row_lst)):
     square[row_lst[i]][col_lst[i]] = 1
 
-
 answer = []
 for i in range(min(row_lst), max(row_lst)+1):
     answer.append(square[i][min(col_lst):max(col_lst)+1])
