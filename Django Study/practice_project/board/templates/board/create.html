@@ -9,7 +9,13 @@
     <input type="submit">
   </form>
   <hr>
-  <a href="{% url 'board:index' %}">[Back]</a>
+
+  <div>
+    <a href="{% url 'board:index' %}">
+      <button>Back</button>
+    </a>
+  </div>
+  
 
   {% comment %} <form action="{% url 'board:create' %}" method="POST">
     {% csrf_token %}

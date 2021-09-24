@@ -15,9 +15,12 @@ Today I Learned⏰
     - HTML
     - CSS
 - Algorithm
-    - List_1
+    - List
     - Stack
     - Queue
+    - String
+    - Tree
+- Django
 
 
 
