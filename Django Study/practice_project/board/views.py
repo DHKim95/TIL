@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from .models import Question
 from .forms import BoardForm
+from django.shortcuts import get_object_or_404
+from django.views.decorators.http import require_http_methods, require_POST
 
 # Create your views here.
 # 데이터를 제출할 html 제공
@@ -12,6 +14,7 @@ from .forms import BoardForm
 #     return render(request, 'board/new.html', context)
 
 # 제출한 데이터 저장
+@require_http_methods(['GET','POST'])
 def create(request):
     if request.method == "POST":
         form = BoardForm(request.POST)
@@ -42,7 +45,8 @@ def index(request):
 
 # 세부 목록 조회
 def detail(request, question_pk):
-    question = Question.objects.get(pk=question_pk)
+    # question = Question.objects.get(pk=question_pk)
+    question = get_object_or_404(Question, pk=question_pk)
     context = {
         'question':question,
     }
@@ -57,8 +61,10 @@ def detail(request, question_pk):
 #     return render(request, 'board/edit.html', context)
 
 # 사용자가 제출한 데이터 수정
+@require_http_methods(['GET','POST'])
 def update(request, question_pk):
-    question = Question.objects.get(pk=question_pk)
+    # question = Question.objects.get(pk=question_pk)
+    question = get_object_or_404(Question, pk=question_pk)
     if request.method == 'POST':
         form = BoardForm(request.POST, instance=question)
         if form.is_valid():
@@ -79,8 +85,10 @@ def update(request, question_pk):
     # return redirect('board:detail', question.pk)
 
 # 데이터 삭제
+@require_POST
 def delete(request, question_pk):
-    question = Question.objects.get(pk=question_pk)
+    # question = Question.objects.get(pk=question_pk)
+    question = get_object_or_404(Question, pk=question_pk)
     if request.method == 'POST':
         question.delete()
         return redirect('board:index')
