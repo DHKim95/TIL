@@ -1,8 +1,10 @@
+from accounts.views import login
 from django.shortcuts import render, redirect
 from .models import Question
 from .forms import BoardForm
 from django.shortcuts import get_object_or_404
 from django.views.decorators.http import require_http_methods, require_POST
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 # 데이터를 제출할 html 제공
@@ -14,6 +16,7 @@ from django.views.decorators.http import require_http_methods, require_POST
 #     return render(request, 'board/new.html', context)
 
 # 제출한 데이터 저장
+@login_required
 @require_http_methods(['GET','POST'])
 def create(request):
     if request.method == "POST":
@@ -61,6 +64,7 @@ def detail(request, question_pk):
 #     return render(request, 'board/edit.html', context)
 
 # 사용자가 제출한 데이터 수정
+@login_required
 @require_http_methods(['GET','POST'])
 def update(request, question_pk):
     # question = Question.objects.get(pk=question_pk)
@@ -85,11 +89,20 @@ def update(request, question_pk):
     # return redirect('board:detail', question.pk)
 
 # 데이터 삭제
+@login_required
 @require_POST
 def delete(request, question_pk):
     # question = Question.objects.get(pk=question_pk)
-    question = get_object_or_404(Question, pk=question_pk)
-    if request.method == 'POST':
+    # question = get_object_or_404(Question, pk=question_pk)
+    # if request.method == 'POST':
+    #     question.delete()
+    #     return redirect('board:index')
+    # return redirect('board:detail', question.pk)
+    
+    # question = get_object_or_404(Question, pk=question_pk)
+    # question.delete()
+
+    if request.user.is_authenticated:
+        question = get_object_or_404(Question, pk=question_pk)
         question.delete()
-        return redirect('board:index')
-    return redirect('board:detail', question.pk)
+    return redirect('board:index')
