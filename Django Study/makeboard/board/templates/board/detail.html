@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>주문서 제목 : {{ question.title }}</h1>
+  <p>주문시각 : {{ question.created_at }}</p>
+  <h2>{{ question.category }}</h2>
+
+  <p>{{ question.content }}</p>
+
+<hr>
+<form action="{% url 'board:delete' question.pk %}" method="POST">
+  {% csrf_token %}
+  <button>삭제</button>
+</form>
+
+<a href="{% url 'board:index' %}">
+  <button>Back</button>
+</a>
+
+{% endblock content %}

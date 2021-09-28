@@ -1,4 +1,3 @@
-from accounts.views import login
 from django.shortcuts import render, redirect
 from .models import Question
 from .forms import BoardForm

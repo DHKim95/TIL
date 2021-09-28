@@ -16,3 +16,4 @@ cnt_sum = num_lst[0]
 for i in range(1,len(num_lst)):
     cnt_sum -= num_lst[i]
 print(cnt_sum)
+

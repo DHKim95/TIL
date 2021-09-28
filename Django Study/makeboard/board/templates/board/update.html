@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>주문서 수정</h1>
+  <form action="{% url 'board:update' question.pk %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit">
+  </form>
+  <hr>
+  <div>
+    <a href="{% url 'board:detail' question.pk %}"></a>
+    <button>Back</button>
+  </div>
+{% endblock content %}

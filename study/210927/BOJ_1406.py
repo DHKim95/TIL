@@ -31,7 +31,8 @@ for i in range(T):
     elif comm[0] == 'P':
         words.append(comm[1])
 
-# 역순으로 추가해줘야함
+# 반대로 들어가기 때문에 역순으로 추가해줘야함
+# 리버스도 가능...
 words.append(''.join(stack[::-1]))
 
 print(''.join(words))

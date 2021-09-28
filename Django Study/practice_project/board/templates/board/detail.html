@@ -18,7 +18,7 @@
 
 
   <hr>
-  <form action="{% url 'board:delete' question.pk %}" method+"POST">
+  <form action="{% url 'board:delete' question.pk %}" method="POST">
     {% csrf_token %}
     <button>삭제</button>
   </form>

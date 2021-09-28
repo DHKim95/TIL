@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% comment %} {% load static %} {% endcomment %}
+
+{% block content %}
+  <h1>주문 목록표</h1>
+  <hr>
+
+  {% if request.user.is_authenticated %}
+    <a href="{% url 'board:create' %}">주문서 작성</a>
+  {% else %}
+    {% comment %} <a href="{% url 'accounts:login' %}">로그인하자</a> {% endcomment %}
+  {% endif %}
+
+  <ul>
+    {% for question in questions %}
+      <li>
+        <a href="{% url 'board:detail' question.pk %}"></a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock content %}
