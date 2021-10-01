@@ -21,6 +21,8 @@ Today I Learned⏰
     - String
     - Tree
 - Django
+    - CRUD
+    - Login
 
 
 
