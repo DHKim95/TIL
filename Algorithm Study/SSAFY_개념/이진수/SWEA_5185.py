@@ -12,6 +12,7 @@ for tc in range(T):
         answer += data[num]
     print("#{} {}".format(tc+1, answer))
 
+
 # for tc in range(T):
 #     N, number = input().split()
 #
