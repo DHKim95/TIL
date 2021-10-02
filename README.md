@@ -20,6 +20,7 @@ Today I Learned⏰
     - Queue
     - String
     - Tree
+    - Greedy
 - Django
     - CRUD
     - Login
