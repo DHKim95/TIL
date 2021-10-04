@@ -33,14 +33,6 @@ Today I Learned⏰
 
 
 
-
-
-
-
-
-
-
-
 -----------------------
 
 문제 출처 : [SW Expert Academy](https://swexpertacademy.com/main/main.do)
