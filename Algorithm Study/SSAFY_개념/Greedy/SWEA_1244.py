@@ -11,7 +11,6 @@ def DFS(change_cnt, idx, number):
         for j in range(i+1, len(arr)):
             # 두개 교환
             arr[i], arr[j] = arr[j], arr[i]
-
             lst = ''.join(arr)
             DFS(change_cnt, idx+1, lst)
             # 원상태로 되돌리기
