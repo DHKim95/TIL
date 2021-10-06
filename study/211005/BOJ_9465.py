@@ -19,3 +19,4 @@ for tc in range(T):
             arr2[i] += max(arr1[i-1], arr1[i-2])
 
         print(max(arr1[N-1], arr2[N-1]))
+        # print(max(arr1[-1], arr2[-1]))
