@@ -52,11 +52,11 @@ def merge(left, right):
     while left_idx < len(left) or right_idx < len(right):
         # 둘다 존재할 때
         if left_idx < len(left) and right_idx < len(right):
-            # 왼쪽이 크면
+            # 왼쪽
             if left[left_idx] <= right[right_idx]:
                 result.append(left[left_idx])
                 left_idx += 1
-            # 오른쪽이 크면
+            # 오른쪽
             else:
                 result.append(right[right_idx])
                 right_idx += 1

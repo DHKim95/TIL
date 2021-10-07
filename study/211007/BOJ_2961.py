@@ -7,6 +7,7 @@ for i in range(1, 1 << N):
     S, B = 1, 0 # 신맛은 곱셈, 쓴맛은 합
     for j in range(N):
         if i & 1 << j:
+            print(i & 1 << j)
             S *= foods[j][0]
             B += foods[j][1]
 

@@ -10,7 +10,6 @@ dx = [-1, 1, 0, 0]
 dy = [0, 0, -1, 1]
 cnt_lst = []
 
-
 # BFS 구현
 def BFS(x, y):
     queue = deque()
