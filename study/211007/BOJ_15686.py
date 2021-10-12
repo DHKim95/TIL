@@ -14,3 +14,15 @@ for i in range(N):
             home_lst.append([i,j])
         elif graph[i][j] == 2:
             chicken_lst.append([i,j])
+
+min_value = float('inf')
+for num in combinations(chicken_lst, M):
+    hap = 0
+    for home in home_lst:
+        hap += min([abs(home[0]-i[0]) + abs(home[1]-i[1]) for i in num])
+        if min_value <= hap:
+            break
+    if hap < min_value:
+        min_value = hap
+
+print(min_value)
