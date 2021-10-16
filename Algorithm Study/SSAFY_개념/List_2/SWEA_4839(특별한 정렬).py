@@ -25,5 +25,4 @@ for tc in range(T):
     else:
         answer = '0'
 
-
     print("#{} {}".format(tc+1, answer))
