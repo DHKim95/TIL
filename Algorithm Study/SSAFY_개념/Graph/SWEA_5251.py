@@ -14,4 +14,12 @@ for tc in range(T):
             for j in range(N+1):
                 graph[i][j] = min(graph[i][j], graph[i][k] + graph[k][j])
 
+<<<<<<< HEAD
     print("#{} {}".format(tc+1, graph[0][N]))
+=======
+<<<<<<< HEAD
+    print("#{} {}".format(tc+1, graph[0][N]))
+=======
+    print("#{} {}".format(tc+1, graph[0][N]))
+>>>>>>> 51f2741b542d3a054cdef77c17242bef479402fc
+>>>>>>> b3fb155ee50f7573883106c96eddcc62e329ff98
