@@ -18,7 +18,12 @@ for tc in range(T):
     print("#{} {}".format(tc+1, graph[0][N]))
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
     print("#{} {}".format(tc+1, graph[0][N]))
+=======
+    print("#{} {}".format(tc+1, graph[0][N]))
+>>>>>>> 51f2741b542d3a054cdef77c17242bef479402fc
+>>>>>>> b3fb155ee50f7573883106c96eddcc62e329ff98
 =======
     print("#{} {}".format(tc+1, graph[0][N]))
 >>>>>>> 51f2741b542d3a054cdef77c17242bef479402fc
