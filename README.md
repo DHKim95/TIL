@@ -25,6 +25,7 @@ Today I Learned⏰
 - Django
     - CRUD
     - Login
+    - accounts
 - 
 
 
