@@ -22,10 +22,12 @@ Today I Learned⏰
     - Tree
     - Greedy
     - Backtracking
+    - Graph
 - Django
     - CRUD
     - Login
     - accounts
+      - follower
 - 
 
 
