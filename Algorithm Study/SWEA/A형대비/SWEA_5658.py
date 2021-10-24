@@ -1,5 +1,4 @@
 T = int(input())
-
 for tc in range(T):
     N, K = map(int, input().split())
     arr = input()
