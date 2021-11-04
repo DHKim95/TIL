@@ -8,27 +8,27 @@ def solution(numbers):
     for i in range(len(sort_number)):
         answer += str(sort_number[i])
 
-    # 테스트 케이스 한개가 걸리는데 이유가 뭘까..?
-    # check = False
-    # for i in range(len(answer)):
-    #     if answer[i] == '0':
-    #         check = True
-    #     else:
-    #         break
-    #
-    # if check == True:
-    #     return 0
-    # else:
-    #     return answer
-    # 0이 앞으로 올수도 있으니 처리해주기
-    cnt = 0
-    for i in range(len(answer)-1):
+    # 테스트 케이스 찾았다!!! 0 문자열임.
+    check = False
+    for i in range(len(answer)):
         if answer[i] == '0':
-            cnt += 1
+            check = True
         else:
             break
 
-    return answer[cnt:]
+    if check == True:
+        return '0'
+    else:
+        return answer
+    # 0이 앞으로 올수도 있으니 처리해주기
+    # cnt = 0
+    # for i in range(len(answer)-1):
+    #     if answer[i] == '0':
+    #         cnt += 1
+    #     else:
+    #         break
+    #
+    # return answer[cnt:]
 
 
 solution(numbers)
