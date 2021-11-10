@@ -18,16 +18,9 @@ k = 2
 #     return str(max(answer))
 
 def solution(number, k):
-    number = list(number)
-    stack = [number.pop(0)]
-    for num in number:
-        while stack and stack[-1] < num and k > 0:
-            stack.pop()
-            k -= 1
-        stack.append(num)
-    if k > 0:
-        return ''.join(stack)[:-k]
-    return ''.join(stack)
+    stack = []
+    for i in number:
+        
 
 
 
