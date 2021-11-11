@@ -7,7 +7,7 @@ def solution(n, costs):
     visited = [0] * n # 방문표시리스트
     visited[0] = 1
 
-    
+
     while sum(visited) != n:
         for cost in costs:
             start, end, c = cost
@@ -21,6 +21,5 @@ def solution(n, costs):
                     break
 
     return answer
-
 
 print(solution(n, costs))
