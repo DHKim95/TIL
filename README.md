@@ -29,7 +29,8 @@ Today I Learned⏰
     - accounts
       - follower
       - comment
-- 
+- JavaScript
+- Vue
 
 
 
