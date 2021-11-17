@@ -32,6 +32,8 @@ Today I Learned⏰
 - JavaScript
 - Vue
 
+- Project Django & Vue
+
 
 
 
