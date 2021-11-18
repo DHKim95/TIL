@@ -26,6 +26,7 @@ Today I Learned⏰
 - Django
     - CRUD
     - Login
+      - Social Login
     - accounts
       - follower
       - comment
