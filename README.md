@@ -9,11 +9,14 @@ Today I Learned⏰
 - Git
     - Git
     - Markdown
+    
 - Python
   - 기본 문법
+  
 - Web
     - HTML
     - CSS
+    
 - Algorithm
     - List
     - Stack
@@ -23,6 +26,7 @@ Today I Learned⏰
     - Greedy
     - Backtracking
     - Graph
+    
 - Django
     - CRUD
     - Login
@@ -30,10 +34,16 @@ Today I Learned⏰
     - accounts
       - follower
       - comment
+    
 - JavaScript
+
 - Vue
 
 - Project Django & Vue
+
+    - Movie
+
+        Personal
 
 
 
