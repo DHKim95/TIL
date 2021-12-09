@@ -13,7 +13,9 @@ def solution(triangle):
             graph[i+1][j] = max(graph[i+1][j], graph[i][j] + triangle[i+1][j])
             # 자신의 한칸밑에 오른쪽
             graph[i+1][j+1] = max(graph[i+1][j+1], graph[i][j] + triangle[i+1][j+1])
-
+            # graph[i+1][j+1] = graph[i][j] + triangle[i+1][j+1]
+# i==0이랑 i==j일때 처리해주기 => 더 줄어듬
+# triangle자체에 갱신하면 더 줄어듬
     return max(graph[-1])
 
 

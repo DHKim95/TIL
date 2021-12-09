@@ -11,6 +11,7 @@ def solution(N, number):
     for i in range(8):
         total_lst[i].add(int(str(N)*(i+1)))
 
+    # print(total_lst)
     for i in range(8):
         for j in range((i+1)//2):
             # 나눌수 있는 경우의 수
