@@ -12,7 +12,7 @@ def solution(money):
 
     # 첫번째 시작작
     for i in range(2, money_length):
-         step2.append(max(step2[i-2] + money[i], step2[i-1]))
+        step2.append(max(step2[i-2] + money[i], step2[i-1]))
 
     # print(step1)
     # print(step2)
