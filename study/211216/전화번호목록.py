@@ -11,7 +11,6 @@ def solution(phone_book):
             return False
     return True
 
-
 ###################################
 # 해쉬 배운거 찾아봄
 # def solution(phone_book):
@@ -31,4 +30,4 @@ def solution(phone_book):
 #                 answer = False
 #     return answer
 
-print(solution(phone_book))
+# print(solution(phone_book))

@@ -35,6 +35,8 @@ Today I Learned⏰
       - follower
       - comment
     
+- SQL
+
 - JavaScript
 
 - Vue
