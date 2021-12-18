@@ -17,7 +17,6 @@ def solution(genres, plays):
             dic_sum[genre] = play
         else:
             dic_sum[genre] += play
-
     # print(dic_index)
     # print(dic_sum)
 
