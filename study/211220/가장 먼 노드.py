@@ -12,6 +12,8 @@ def solution(n, edge):
         graph[i[0]].append(i[1])
         graph[i[1]].append(i[0])
 
+    # print(graph)
+
     # 출발노드 1
     queue = deque([1])
     distance[1] = 0
@@ -23,6 +25,8 @@ def solution(n, edge):
             if distance[i] == -1:
                 queue.append(i)
                 distance[i] = distance[now] + 1
+
+    # print(distance)
 
     # 가장 먼곳 몇개인지 찾기
     for dis in distance:

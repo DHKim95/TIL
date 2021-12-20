@@ -17,11 +17,17 @@ def solution(genres, plays):
             dic_sum[genre] = play
         else:
             dic_sum[genre] += play
-    # print(dic_index)
-    # print(dic_sum)
+    print(dic_index)
+    print(dic_sum)
 
+    # 총합을 먼저 뽑아내고 높은 순으로
     for(key, value) in sorted(dic_sum.items(), key=lambda x: x[1], reverse=True):
+        # print(key)
+        # a = sorted(dic_index[key], key=lambda x: x[1], reverse=True)
+        # print("원본",a)
+        # 2개씩 모아서
         for (i, play) in sorted(dic_index[key], key=lambda x: x[1], reverse=True)[:2]:
+            # print(i, play)
             answer.append(i)
 
     return answer
