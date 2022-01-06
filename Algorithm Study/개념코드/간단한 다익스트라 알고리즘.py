@@ -47,3 +47,13 @@ def dijkstra(start):
             # 현재 노드를 거쳐서 다른 노드로 이동하는 거리가 더 짧은 경우
             if cost < distance[j[0]]:
                 distance[j[0]] = cost
+
+dijkstra(start)
+print(graph)
+print(distance)
+
+for i in range(1, n+1):
+    if distance[i] == INF:
+        print("INFINITY")
+    else:
+        print(distance[i])
