@@ -28,7 +28,6 @@ while time <= 100:
                     row_dic[row] += 1
                 else:
                     row_dic[row] = 1
-
             sort_row = sorted(row_dic.items(), key=lambda x: (x[1], x[0]))
             for number, cnt in sort_row:
                 if number == 0:
@@ -53,6 +52,7 @@ while time <= 100:
     elif len(graph) < len(graph[0]):
         # print("세로 시작")
         graph = list(map(list, zip(*graph)))
+
         # print("돌려보자", graph)
         for rows in graph:
             row_lst = []
