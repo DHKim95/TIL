@@ -4,64 +4,68 @@ N = int(input())
 
 graph = [list(map(int, input().split())) for _ in range(N)]
 
+# 위쪽 왼쪽 먼저
 dx = [-1, 0, 1, 0]
 dy = [0, -1, 0, 1]
 
-baby_x, baby_y = 0, 0
-baby_size = 2
+baby_size = 2 # 아기상어크기
+a = 0 # 크기
+shark_eat = 0 # 먹는시간
 
-for i in range(N):
-    for j in range(N):
-        if graph[i][j] == 9:
-            baby_x, baby_y = i, j
-            graph[baby_x][baby_y] = 0
-
-
-def BFS():
-    distance = [[-1] * N for _ in range(N)]
-    queue = deque([(baby_x, baby_y)])
-    distance[baby_x][baby_y] = 0
-
+def BFS(x, y, baby_size):
+    queue = deque()
+    queue.append((x, y))
+    visited[x][y] = 1
     while queue:
         x, y = queue.popleft()
         for direction in range(4):
             nx = x + dx[direction]
             ny = y + dy[direction]
+            # 범위 안
             if 0 <= nx < N and 0 <= ny < N:
-                if distance[nx][ny] == -1 and graph[nx][ny] <= baby_size:
+                # 자신과 같으면 지나가기
+                if (graph[nx][ny] == baby_size or graph[nx][ny] == 0) and visited[nx][ny] == 0:
+                    visited[nx][ny] = 1
                     distance[nx][ny] = distance[x][y] + 1
                     queue.append((nx, ny))
-    return distance
-
-result = 0
-shark_eat = 0
-
-def shark_find(dis):
-    x, y = 0, 0
-    min_distance = 987654321
-    for i in range(N):
-        for j in range(N):
-            if dis[i][j] != -1 and graph[i][j] >= 1 and graph[i][j] < baby_size:
-                if min_distance > dis[i][j]:
-                    x, y = i, j
-                    min_distance = dis[i][j]
-
-    if min_distance == 987654321:
-        return None
-    else:
-        return x, y, min_distance
+                # 먹을수 있는 물고기
+                elif graph[nx][ny] < baby_size and visited[nx][ny] == 0:
+                    visited[nx][ny] = 1
+                    distance[nx][ny] = distance[x][y] + 1
+                    queue.append((nx, ny))
+                    result.append([distance[nx][ny], nx, ny])
 
 while True:
-    lst = shark_find(BFS())
-    if lst == None:
-        print(result)
-        break
-    else:
-        now_x, now_y = lst[0], lst[1]
-        result += lst[2]
-        graph[now_x][now_y] = 0
-        shark_eat += 1
+    result = []
+    visited = [[0] * N for _ in range(N)]
+    distance = [[0] * N for _ in range(N)]
+    # print(graph)
+    for i in range(N):
+        for j in range(N):
+            # 아기상어 발견
+            if graph[i][j] == 9:
+                BFS(i, j, baby_size)
+                graph[i][j] = 0
 
-        if shark_eat >= baby_size:
-            baby_size += 1
-            shark_eat = 0
+    # 먹은 물고기가 있으면 정렬
+    if len(result) != 0:
+        result.sort()
+        min_dis, now_x, now_y = result.pop(0)
+        shark_eat += min_dis # 시간더하기
+        a += 1# 같은 수 크기
+        graph[now_x][now_y] = 9
+    else:
+        break
+    print(a)
+    if a == baby_size:
+        # print("언제지", a)
+        baby_size += 1
+        a = 0
+
+print(shark_eat)
+
+'''
+아기상어는 자기보다 크기가 작은 물고기를 먹을 수 있고 크기가 같다면 지나갈 수만 있고 크기가 자신보다 크다면 지나갈 수 없다.
+bfs를 돌면서 자신보다 크기가 작은 물고기(먹을수 있는 물고기)를 만나면 result 리스트에 거리, x좌표, y좌표 순으로 넣어준다.
+result 리스트를 sort 정렬 시켜서 가장 거리가 짧은 물고기를 먹고 (거리가 같다면 x좌표, y좌표 순으로 오름차순 정렬된다.) exp를 +1 해주고 만약 exp와 size가 같다면 size를 1 증가시켜 준다.
+아기상어가 먹을수 있는 물고기가 없을때 까지 계속 돌아주고 아기상어가 물고기를 잡아먹은 시간은 이동거리와 똑같으므로 distance배열로 구해줬다.'''
