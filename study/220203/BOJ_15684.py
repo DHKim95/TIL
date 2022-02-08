@@ -28,7 +28,7 @@ def DFS(cnt, x, y):
     if cnt == 3:
         return
     for i in range(x, H):
-        # 같으,ㄴ 세로줄 확인하며 y부터 확인 다르면 0부터
+        # 같은 세로줄 확인하며 y부터 확인 다르면 0부터
         if i == x:
             t = y
         else:
@@ -45,10 +45,12 @@ N, M, H = map(int, input().split())
 graph = [[0] * N for _ in range(H)]
 
 for _ in range(M):
+    # 가로세로선
     a, b = map(int, input().split())
     graph[a-1][b-1] = 1
 
 answer = 4
+# 개수, x, y
 DFS(0, 0, 0)
 if answer <= 3:
     print(answer)
