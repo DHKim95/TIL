@@ -3,7 +3,6 @@ def runway(road):
         # 차이가 1 초과면 종료
         if abs(road[j] - road[j-1]) > 1:
             return False
-        print(j)
 
         # 오른쪽 스캔
         if road[j] < road[j - 1]:
@@ -21,12 +20,12 @@ def runway(road):
         elif road[j] > road[j-1]:
             for idx in range(L):
                 # 범위가 넘어가거나  이미 설치했거나  낮은곳의 높이가 다른경우
-                if j - idx - 1 < 0 or road[j - 1] != road[j - idx - 1] or visited[j - idx - 1]:
+                if j - idx - 1 < 0 or visited[j - idx - 1] or road[j - 1] != road[j - idx - 1]:
                     return False
 
                 # 높이가 같은 경우
                 if road[j - 1] == road[j - idx - 1]:
-                    visited[j- idx - 1] = True
+                    visited[j - idx - 1] = True
 
     # 문제 없이 설치
     return True
