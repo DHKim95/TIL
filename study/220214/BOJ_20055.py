@@ -32,12 +32,15 @@ while True:
     # 이동 후에 내리기
     under_arr[-1] = 0
 
+    # 올리는 위치에 있는 칸의 내구도가 0이 아니면
     if arr[0] > 0 and under_arr[0] == 0:
         arr[0] -= 1
         under_arr[0] = 1
 
+    # 진행단계 카운트
     progress += 1
 
+    # 내구도가 0인 칸의 개수가 K개 이상이면 종료
     if arr.count(0) >= K:
         break
 
